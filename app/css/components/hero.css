@@ -1,12 +1,37 @@
+/* Common */
+.hero__content,
+.hero__button {
+  display: flex;
+}
+
 /* Hero */
 .hero {
   background-color: var(--color-primary);
 }
 
+.hero__content {
+  flex-direction: column;
+  padding: var(--s-3xl) 0 var(--s-xl);
+}
+
+/* Title */
+.hero__title {
+  line-height: var(--lh-2xl);
+}
+
+/* Description */
+.hero__description {
+  line-height: var(--lh-lg);
+  letter-spacing: var(--ls-2xl);
+}
+
 /* Button */
 .hero__button {
+  line-height: var(--lh-sm);
+  letter-spacing: var(--ls-sm);
   background-color: var(--color-primary-soft);
   border-radius: var(--rad-base);
+  width: fit-content; /* Reset to default size */
 }
 .hero__button-icon {
   background-image: url("../../images/add-icon.svg");

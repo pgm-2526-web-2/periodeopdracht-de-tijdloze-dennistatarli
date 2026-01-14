@@ -13,12 +13,16 @@
   /* Colors */
   --color-primary: #ffe682;
   --color-primary-soft: #fff7d6;
+  --color-secondary: #e5e5e5;
 
   --color-text: #000;
+  --color-text-soft: #1b2130;
+  --color-text-accent: #495470;
 
   --color-btn-active: #000;
 
   /* Font sizes */
+  --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
   --fs-md: 1rem;
   --fs-lg: 1.25rem;
@@ -26,8 +30,27 @@
   --fs-2xl: 2.5rem; /* Loading state title */
   --fs-3xl: 2.8rem; /* Desktop title */
 
+  /* Line height */
+  --lh-xs: 1rem;
+  --lh-sm: 1.25rem;
+  --lh-lg: 1.75rem;
+  --lh-2xl: 3.25rem;
+
+  /* Letter spacing */
+  --ls-sm: 0.00625rem;
+  --ls-md: 0.016rem;
+  --ls-xl: 0.025rem;
+  --ls-2xl: 0.031rem;
+
+  /* Border */
+  --b-base: 1px solid var(--color-secondary);
+
   /* Radius */
   --rad-base: 1.5rem;
+  --rad-sm: 0.5rem;
+
+  /* Transition */
+  --trans-base: 150ms ease;
 
   /* Animations */
   --anim-spin-duration: 2s;

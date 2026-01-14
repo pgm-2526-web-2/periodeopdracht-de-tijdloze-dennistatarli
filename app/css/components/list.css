@@ -1,0 +1,141 @@
+/* COMMON */
+.list__tabs,
+.list__items,
+.list__item,
+.list__rank,
+.list__album,
+.list__song {
+  display: flex;
+}
+
+.list__artist,
+.list__album {
+  color: var(--color-text-accent);
+}
+
+.list__rank,
+.list__favorite {
+  border-radius: var(--rad-sm);
+  padding: var(--s-sm);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* --=== TABS ===-- */
+.list__tabs {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  letter-spacing: var(--ls-sm);
+  border-bottom: var(--b-base);
+}
+
+/* Tab */
+.list__tab {
+  position: relative; /* Allows position of underlining */
+  cursor: pointer;
+  padding: var(--s-sm);
+}
+
+/* Position of underlining */
+.list__tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.25rem;
+  background-color: var(--color-btn-active);
+  border-radius: var(--rad-base) var(--rad-base) 0 0;
+  opacity: 0; /* Hide underlining on default */
+  transition: opacity var(--trans-base);
+}
+
+/* Underlining of first tab visible on default */
+.list__tab--active::after {
+  opacity: 1;
+}
+
+/* Underlining appears when hovering over a tab */
+.list__tab:hover::after {
+  opacity: 1;
+}
+
+/* Hide underlining of tabs when hovering over a tab */
+.list__tabs:has(.list__tab:hover) .list__tab--active::after {
+  opacity: 0;
+}
+/* Keep underlining visible of hovered tab */
+.list__tabs:has(.list__tab:hover) .list__tab:hover::after {
+  opacity: 1;
+}
+
+/* --=== SONGS ===-- */
+/* List */
+.list__items {
+  flex-direction: column;
+}
+
+/* Item */
+.list__item {
+  align-items: flex-start;
+  gap: var(--s-md);
+  padding-top: var(--s-md);
+}
+
+/* Rank */
+.list__rank {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+}
+
+/* Song */
+.list__song {
+  border-bottom: var(--b-base);
+  flex: 1; /* Takes up available space */
+  flex-direction: column;
+}
+
+/* Title */
+.list__title {
+  color: var(--color-text-soft);
+  font-size: var(--fs-lg);
+  font-weight: normal;
+  line-height: var(--lh-lg);
+}
+
+/* Artist */
+.list__artist {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  letter-spacing: var(--ls-md);
+}
+
+/* Album */
+.list__album {
+  align-items: center;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  letter-spacing: var(--ls-xl);
+  gap: var(--s-xs);
+  padding: var(--s-sm) 0 var(--s-md);
+}
+
+/* Icon */
+.list__album-icon,
+.list__favorite {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.list__album-icon {
+  background-image: url("../../images/logo-tijdloze-soft.svg");
+  width: 1rem;
+  height: 1rem;
+}
+
+.list__favorite {
+  background-color: var(--color-primary);
+  background-size: 50%;
+}
