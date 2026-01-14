@@ -7,11 +7,16 @@
   --s-md: 1rem;
   --s-lg: 1.5rem;
   --s-xl: 2rem;
+  --s-2xl: 2.5rem;
+  --s-3xl: 3.5rem;
 
   /* Colors */
   --color-primary: #ffe682;
   --color-primary-soft: #fff7d6;
+
   --color-text: #000;
+
+  --color-btn-active: #000;
 
   /* Font sizes */
   --fs-sm: 0.875rem;
@@ -20,6 +25,9 @@
   --fs-xl: 1.5rem;
   --fs-2xl: 2.5rem; /* Loading state title */
   --fs-3xl: 2.8rem; /* Desktop title */
+
+  /* Radius */
+  --rad-base: 1.5rem;
 
   /* Animations */
   --anim-spin-duration: 2s;

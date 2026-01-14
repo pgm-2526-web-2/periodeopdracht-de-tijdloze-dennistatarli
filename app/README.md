@@ -2,4 +2,5 @@
 
 # Info
 
+- Had problems with Github, worked a bit on the project without Github. Initial commit has code for the website.
 - Working with utilities (similar to Tailwind CSS)

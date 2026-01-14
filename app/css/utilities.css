@@ -48,6 +48,12 @@
 .u-gap-xl {
   gap: var(--s-xl);
 }
+.u-gap-2xl {
+  gap: var(--s-2xl);
+}
+.u-gap-3xl {
+  gap: var(--s-3xl);
+}
 
 /* MARGIN */
 .u-m-0 {
@@ -368,6 +374,14 @@
   padding-left: var(--s-xl);
   padding-right: var(--s-xl);
 }
+.u-px-2xl {
+  padding-left: var(--s-2xl);
+  padding-right: var(--s-2xl);
+}
+.u-px-3xl {
+  padding-left: var(--s-3xl);
+  padding-right: var(--s-3xl);
+}
 
 /* PADDING TOP + BOTTOM */
 .u-py-0 {
@@ -397,6 +411,10 @@
 .u-py-xl {
   padding-top: var(--s-xl);
   padding-bottom: var(--s-xl);
+}
+.u-py-2xl {
+  padding-top: var(--s-2xl);
+  padding-bottom: var(--s-2xl);
 }
 
 /* TYPOGRAPHY */

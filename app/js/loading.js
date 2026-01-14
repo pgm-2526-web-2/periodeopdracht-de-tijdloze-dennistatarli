@@ -24,6 +24,6 @@
   // localStorage.setItem(KEY, "true");
 
   window.addEventListener("load", () => {
-    setTimeout(hideSplash, 4000); // Test timer on first visit
+    setTimeout(hideSplash, 0); // Test timer on first visit
   });
 })();

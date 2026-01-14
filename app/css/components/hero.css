@@ -1,0 +1,18 @@
+/* Hero */
+.hero {
+  background-color: var(--color-primary);
+}
+
+/* Button */
+.hero__button {
+  background-color: var(--color-primary-soft);
+  border-radius: var(--rad-base);
+}
+.hero__button-icon {
+  background-image: url("../../images/add-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 1rem;
+  height: 1rem;
+}
