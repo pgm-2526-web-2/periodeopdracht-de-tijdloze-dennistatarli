@@ -1,0 +1,26 @@
+:root {
+  /* Spacing */
+  --s-0: 0;
+  --s-2xs: 0.25rem;
+  --s-xs: 0.5rem;
+  --s-sm: 0.75rem;
+  --s-md: 1rem;
+  --s-lg: 1.5rem;
+  --s-xl: 2rem;
+
+  /* Colors */
+  --color-primary: #ffe682;
+  --color-primary-soft: #fff7d6;
+  --color-text: #000;
+
+  /* Font sizes */
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2.5rem; /* Loading state title */
+  --fs-3xl: 2.8rem; /* Desktop title */
+
+  /* Animations */
+  --anim-spin-duration: 2s;
+}

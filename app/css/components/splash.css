@@ -1,0 +1,23 @@
+/* Main container */
+.splash {
+  background-color: var(--color-primary);
+  height: 100vh; /* Take up full screen */
+}
+
+/* Logo */
+.splash__logo {
+  background-image: url("../../images/logo-tijdloze.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 8rem;
+  height: 8rem;
+  animation: spin var(--anim-spin-duration) linear infinite;
+}
+
+/* Animation logo */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
