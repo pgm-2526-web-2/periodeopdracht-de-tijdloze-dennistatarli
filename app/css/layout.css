@@ -1,9 +1,19 @@
 .wrapper {
-  padding: 0 var(--s-md);
+  padding: 0 clamp(var(--s-md), 3vw, var(--s-xl));
   margin: 0 auto;
   max-width: 70rem;
 }
 
 main {
-  padding-bottom: 6rem;
+  padding-bottom: 7rem; /* Navigation is fixed at the bottom -> extra space so that elements on page are visible */
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /*
+  Reset pb and add pl (navigation from bottom to left side)
+  Kept the pb otherwise app feels "empty" */
+  main {
+    padding-left: 6rem;
+  }
 }

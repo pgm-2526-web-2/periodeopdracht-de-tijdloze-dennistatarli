@@ -1,19 +1,22 @@
 /* Common */
 .logo-mobile,
 .navigation__links,
-.navigation__slot {
+.navigation__slot,
+.navigation__part {
   display: flex;
   align-items: center;
 }
 
-.logo-mobile .logo__icon,
+/* Show mobile logo and navigation icons */
+.logo-mobile,
 .navigation__icon {
-  display: block;
+  display: inline-flex; /* Block doesn't work? */
 }
 
-/* Hide logo desktop */
-.logo-desktop {
-  display: hidden; /* No display: block for this so this line is not needed, but added to be sure */
+/* Hide logo desktop & dark mode button */
+.logo-desktop,
+.navigation__dark {
+  display: none; /* No display: block for this so this line is not needed, but added to be sure */
 }
 
 /* Header */
@@ -22,8 +25,8 @@
   padding-top: var(--s-md);
 }
 
-/* Mobile logo */
-.logo-mobile {
+.logo-mobile,
+.logo-desktop {
   width: fit-content; /* Only takes up space that is needed */
 }
 
@@ -47,6 +50,7 @@
 /* Links */
 .navigation__links {
   justify-content: space-between;
+  width: 100%;
   padding: var(--s-xs) var(--s-3xl) var(--s-lg);
 }
 
@@ -90,4 +94,69 @@
 /* Label */
 .navigation__label {
   font-size: var(--fs-sm);
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  /* TEST */
+  /* .navigation {
+    background: red;
+  } */
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* Common */
+  .logo-desktop,
+  .navigation__dark {
+    display: block;
+  }
+
+  /* Header */
+  .header {
+    padding-top: 0; /* Reset the spacing meant for logo-mobile and title */
+  }
+
+  /* Hide mobile logo */
+  .logo-mobile {
+    display: none;
+  }
+
+  /* Navigation */
+  .navigation {
+    /* Change values -> navigation is now left side */
+    top: 0;
+    right: auto;
+  }
+
+  /* Inside navigation */
+  .navigation__part {
+    height: 100%;
+    flex-direction: column;
+    padding: var(--s-lg) var(--s-md);
+    gap: var(--s-3xl);
+  }
+
+  /* Show desktop logo */
+  .logo-desktop {
+    display: inline-flex;
+  }
+
+  /* Links */
+  .navigation__links {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--s-lg);
+    padding: 0; /* Reset padding from mobile */
+  }
+
+  /* Dark mode */
+  .navigation__dark {
+    margin-top: auto; /* At bottom of screen */
+  }
+  .icon-4 {
+    background-image: url("../../images/dark-mode-icon.svg");
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }

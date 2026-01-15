@@ -10,7 +10,6 @@
 }
 
 .hero__content {
-  flex-direction: column;
   padding: var(--s-3xl) 0 var(--s-xl);
 }
 
@@ -23,6 +22,7 @@
 .hero__description {
   line-height: var(--lh-lg);
   letter-spacing: var(--ls-2xl);
+  max-width: 31rem;
 }
 
 /* Button */
@@ -46,4 +46,11 @@
   background-size: contain;
   width: 1rem;
   height: 1rem;
+}
+
+/* Desktop */
+
+/* Hero */
+.hero__content {
+  padding: var(--s-3xl) 0;
 }

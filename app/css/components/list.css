@@ -122,11 +122,12 @@
 
 /* Song */
 .list__song {
+  border-bottom: var(--b-base);
   flex: 1; /* Takes up available space */
   flex-direction: column;
 }
-.list__song:not(:last-child) {
-  border-bottom: var(--b-base);
+.list__item:last-child .list__song {
+  border-bottom: none;
 }
 
 /* Title */
