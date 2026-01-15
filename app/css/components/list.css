@@ -163,13 +163,20 @@
   background-size: contain;
 }
 .list__album-icon {
-  background-image: url("../../images/logo-tijdloze-soft.svg");
   width: 1rem;
   height: 1rem;
 }
 .list__favorite {
   background-color: var(--color-primary);
   background-size: 50%;
+  transition: filter var(--trans-base);
+}
+.list__favorite {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: var(--color-primary);
   transition: filter var(--trans-base);
 }
 /* Darker background color when hovered */
@@ -183,22 +190,18 @@
   display: none;
 }
 
-.page--favorites .list__favorite.icon-2 {
-  background-image: url("../../images/delete-icon.svg");
-}
-
 .page--favorites .list__favorite {
   background-color: var(--color-primary-soft);
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
-  /* Favorite button */
   .page--favorites .list__favorite {
-    width: auto; /* Takes up its space and grows */
-    padding: 0 var(--s-md) 0 var(--s-2xl);
-    background-position: var(--s-md); /* Icon comes in correct position */
-    background-size: 1.1rem;
+    width: auto; /* Takes up needed space */
+    display: flex;
+    align-items: center;
+    gap: var(--s-xs);
+    padding: 0 var(--s-md);
   }
   .page--favorites .list__favorite-text {
     display: block;

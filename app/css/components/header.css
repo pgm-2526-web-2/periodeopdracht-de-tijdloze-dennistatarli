@@ -2,10 +2,13 @@
 .logo-mobile,
 .navigation__links,
 .navigation__slot,
-.navigation__part {
+.navigation__part,
+.navigation__item,
+.navigation__icon {
   display: flex;
   align-items: center;
 }
+
 /* Show mobile logo and navigation icons */
 .logo-mobile,
 .navigation__icon {
@@ -34,7 +37,6 @@
 }
 
 .logo__icon {
-  background-image: url("../../images/logo-tijdloze.svg");
   width: 3rem;
   height: 3rem;
 }
@@ -58,6 +60,7 @@
 /* Item */
 .navigation__item {
   text-align: center;
+  flex-direction: column;
 }
 
 /* Slots */
@@ -81,29 +84,12 @@
 .navigation__icon {
   width: 1.5rem;
   height: 1.5rem;
-}
-.icon-1 {
-  background-image: url("../../images/list-active-icon.svg");
-}
-.icon-2 {
-  background-image: url("../../images/favorites-icon.svg");
-}
-.icon-3 {
-  background-image: url("../../images/add-icon.svg");
+  justify-content: center;
 }
 
 /* Label */
 .navigation__label {
   font-size: var(--fs-sm);
-}
-
-/* ---==== PAGE FAVORITES ====--- */
-/* Icons */
-.page--favorites .icon-1 {
-  background-image: url("../../images/list-icon.svg");
-}
-.page--favorites .navigation__item .icon-2 {
-  background-image: url("../../images/favorites-active-icon.svg");
 }
 
 /* Desktop */
@@ -155,10 +141,5 @@
   /* Dark mode */
   .navigation__dark {
     margin-top: auto; /* At bottom of screen */
-  }
-  .icon-4 {
-    background-image: url("../../images/dark-mode-icon.svg");
-    width: 1.2rem;
-    height: 1.2rem;
   }
 }
