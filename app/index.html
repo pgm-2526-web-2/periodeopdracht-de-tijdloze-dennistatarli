@@ -20,7 +20,7 @@
     <header class="header">
         <div class="wrapper">
             <!-- Mobile logo -->
-            <a href="#" class="logo logo-mobile u-flex u-items-center u-gap-sm">
+            <a href="#" class="logo logo-mobile u-gap-sm">
                 <span class="logo__icon u-block"></span>
                 <p class="logo__title u-fw-bold u-text-lg">De Tijdloze</p>
             </a>
@@ -30,41 +30,33 @@
         <nav class="navigation">
             <div class="navigation__part">
                 <!-- Desktop logo -->
-                <a href="#" class="logo">
+                <a href="#" class="logo logo-desktop">
                     <span class="logo__icon"></span>
                 </a>
 
                 <!-- Links -->
-                <div class="navigation__links u-flex u-items-center u-justify-between u-px-3xl u-pt-sm u-pb-lg">
-                    <!-- Item -->
-                    <div class="navigation__item u-flex u-flex-col u-items-center u-justify-center">
-                        <a href="#" class="navigation__icon-link u-flex u-items-center u-justify-center">
-                            <span class="navigation__icon-slot u-flex u-items-center u-justify-center">
-                                <span class="navigation__links-icon icon-1 u-block u-px-xl u-py-md"></span>
-                            </span>
-                        </a>
-                        <span class="navigation__label u-text-sm">De Lijst</span>
-                    </div>
+                <div class="navigation__links">
 
-                    <!-- Item -->
-                    <div class="navigation__item u-flex u-flex-col u-items-center u-justify-center">
-                        <a href="#" class="navigation__icon-link u-flex u-items-center u-justify-center">
-                            <span class="navigation__icon-slot u-flex u-items-center u-justify-center">
-                                <span class="navigation__links-icon icon-2 u-block"></span>
-                            </span>
-                        </a>
-                        <span class="navigation__label u-text-sm">Favorieten</span>
-                    </div>
+                    <a href="#" class="navigation__item">
+                        <span class="navigation__slot navigation__icon--active">
+                            <span class="navigation__icon icon-1"></span>
+                        </span>
+                        <span class="navigation__label">De lijst</span>
+                    </a>
 
-                    <!-- Item -->
-                    <div class="navigation__item u-flex u-flex-col u-items-center u-justify-center">
-                        <a href="#" class="navigation__icon-link u-flex u-items-center u-justify-center">
-                            <span class="navigation__icon-slot u-flex u-items-center u-justify-center">
-                                <span class="navigation__links-icon icon-3 u-block"></span>
-                            </span>
-                        </a>
-                        <span class="navigation__label u-text-sm">Voeg toe</span>
-                    </div>
+                    <a href="#" class="navigation__item">
+                        <span class="navigation__slot">
+                            <span class="navigation__icon icon-2"></span>
+                        </span>
+                        <span class="navigation__label">Favorieten</span>
+                    </a>
+
+                    <a href="#" class="navigation__item">
+                        <span class="navigation__slot">
+                            <span class="navigation__icon icon-3"></span>
+                        </span>
+                        <span class="navigation__label">Voeg toe</span>
+                    </a>
                 </div>
 
                 <button class="navigation__dark u-hidden">
@@ -109,7 +101,10 @@
 
                         <!-- Song -->
                         <article class="list__item">
-                            <span class="list__rank">1</span>
+                            <span class="list__rank">
+                                <span class="list__rank-number">1</span>
+                                <span class="list__rank-badge">+1</span>
+                            </span>
                             <div class="list__song">
                                 <h2 class="list__title">Black</h2>
                                 <p class="list__artist">Pearl Jam</p>
@@ -118,12 +113,15 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <span class="list__favorite icon-2"></span>
+                            <button class="list__favorite icon-2"></button>
                         </article>
 
                         <!-- Song -->
                         <article class="list__item">
-                            <span class="list__rank">1</span>
+                            <span class="list__rank">
+                                <span class="list__rank-number">1</span>
+                                <span class="list__rank-badge">+1</span>
+                            </span>
                             <div class="list__song">
                                 <h2 class="list__title">Black</h2>
                                 <p class="list__artist">Pearl Jam</p>
@@ -132,12 +130,15 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <span class="list__favorite icon-2"></span>
+                            <button class="list__favorite icon-2"></button>
                         </article>
 
                         <!-- Song -->
                         <article class="list__item">
-                            <span class="list__rank">1</span>
+                            <span class="list__rank">
+                                <span class="list__rank-number">1</span>
+                                <span class="list__rank-badge">+1</span>
+                            </span>
                             <div class="list__song">
                                 <h2 class="list__title">Black</h2>
                                 <p class="list__artist">Pearl Jam</p>
@@ -146,12 +147,15 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <span class="list__favorite icon-2"></span>
+                            <button class="list__favorite icon-2"></button>
                         </article>
 
                         <!-- Song -->
                         <article class="list__item">
-                            <span class="list__rank">1</span>
+                            <span class="list__rank">
+                                <span class="list__rank-number">1</span>
+                                <span class="list__rank-badge">+1</span>
+                            </span>
                             <div class="list__song">
                                 <h2 class="list__title">Black</h2>
                                 <p class="list__artist">Pearl Jam</p>
@@ -160,12 +164,15 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <span class="list__favorite icon-2"></span>
+                            <button class="list__favorite icon-2"></button>
                         </article>
 
                         <!-- Song -->
                         <article class="list__item">
-                            <span class="list__rank">1</span>
+                            <span class="list__rank">
+                                <span class="list__rank-number">1</span>
+                                <span class="list__rank-badge">+1</span>
+                            </span>
                             <div class="list__song">
                                 <h2 class="list__title">Black</h2>
                                 <p class="list__artist">Pearl Jam</p>
@@ -174,7 +181,7 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <span class="list__favorite icon-2"></span>
+                            <button class="list__favorite icon-2"></button>
                         </article>
 
                     </div>

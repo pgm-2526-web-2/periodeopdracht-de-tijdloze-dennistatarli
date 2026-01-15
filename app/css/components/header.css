@@ -1,3 +1,21 @@
+/* Common */
+.logo-mobile,
+.navigation__links,
+.navigation__slot {
+  display: flex;
+  align-items: center;
+}
+
+.logo-mobile .logo__icon,
+.navigation__icon {
+  display: block;
+}
+
+/* Hide logo desktop */
+.logo-desktop {
+  display: hidden; /* No display: block for this so this line is not needed, but added to be sure */
+}
+
 /* Header */
 .header {
   background-color: var(--color-primary);
@@ -5,6 +23,10 @@
 }
 
 /* Mobile logo */
+.logo-mobile {
+  width: fit-content; /* Only takes up space that is needed */
+}
+
 .logo__icon {
   background-image: url("../../images/logo-tijdloze.svg");
   width: 3rem;
@@ -19,34 +41,53 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 9999; /* Highest priority -> always visible */
+}
+
+/* Links */
+.navigation__links {
+  justify-content: space-between;
+  padding: var(--s-xs) var(--s-3xl) var(--s-lg);
+}
+
+/* Item */
+.navigation__item {
+  text-align: center;
 }
 
 /* Slots */
-.navigation__icon-slot {
-  width: 3rem;
-  height: 3rem;
+.navigation__slot {
+  justify-content: center;
+  padding: var(--s-2xs) var(--s-md);
+  border-radius: var(--rad-base);
+}
+
+.navigation__icon--active {
+  background-color: var(--color-btn-active);
 }
 
 /* Icons */
-.navigation__links-icon,
+.navigation__icon,
 .logo__icon {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
-.navigation__links-icon {
+.navigation__icon {
   width: 1.5rem;
   height: 1.5rem;
 }
 .icon-1 {
   background-image: url("../../images/list-icon.svg");
-  background-color: var(--color-btn-active);
-  width: 1rem;
-  height: 1rem;
 }
 .icon-2 {
   background-image: url("../../images/favorites-icon.svg");
 }
 .icon-3 {
   background-image: url("../../images/add-icon.svg");
+}
+
+/* Label */
+.navigation__label {
+  font-size: var(--fs-sm);
 }

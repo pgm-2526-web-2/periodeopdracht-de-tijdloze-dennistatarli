@@ -1,4 +1,4 @@
-/* COMMON */
+/* Common */
 .list__tabs,
 .list__items,
 .list__item,
@@ -8,6 +8,7 @@
   display: flex;
 }
 
+.list__tab,
 .list__artist,
 .list__album {
   color: var(--color-text-accent);
@@ -17,9 +18,11 @@
 .list__favorite {
   border-radius: var(--rad-sm);
   padding: var(--s-sm);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
 }
+
+/* List */
 
 /* --=== TABS ===-- */
 .list__tabs {
@@ -50,16 +53,31 @@
   transition: opacity var(--trans-base);
 }
 
+/* Active tab has dark color */
+.list__tab--active {
+  color: var(--color-text);
+}
+/* Hovered tab has dark color */
+.list__tab:hover {
+  color: var(--color-text);
+}
+/* Active tab has light color when other tabs are hovered */
+.list__tabs:has(.list__tab:hover) .list__tab--active {
+  color: var(--color-text-accent);
+}
+/* Active tab keeps dark color when hovered (active tab had light color when hovered over it) */
+.list__tabs:has(.list__tab:hover) .list__tab:hover {
+  color: var(--color-text);
+}
+
 /* Underlining of first tab visible on default */
 .list__tab--active::after {
   opacity: 1;
 }
-
 /* Underlining appears when hovering over a tab */
 .list__tab:hover::after {
   opacity: 1;
 }
-
 /* Hide underlining of tabs when hovering over a tab */
 .list__tabs:has(.list__tab:hover) .list__tab--active::after {
   opacity: 0;
@@ -70,7 +88,6 @@
 }
 
 /* --=== SONGS ===-- */
-/* List */
 .list__items {
   flex-direction: column;
 }
@@ -87,13 +104,29 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-secondary);
+  position: relative;
+}
+
+/* Rank floating badge */
+.list__rank-badge {
+  position: absolute;
+  left: -0.4rem;
+  bottom: -0.6rem;
+  background-color: var(--color-btn-active);
+  color: var(--color-text-light);
+  font-size: var(--fs-2xs);
+  line-height: var(--lh-base);
+  padding: var(--s-badge);
+  border-radius: var(--rad-base);
 }
 
 /* Song */
 .list__song {
-  border-bottom: var(--b-base);
   flex: 1; /* Takes up available space */
   flex-direction: column;
+}
+.list__song:not(:last-child) {
+  border-bottom: var(--b-base);
 }
 
 /* Title */
@@ -128,14 +161,17 @@
   background-position: center;
   background-size: contain;
 }
-
 .list__album-icon {
   background-image: url("../../images/logo-tijdloze-soft.svg");
   width: 1rem;
   height: 1rem;
 }
-
 .list__favorite {
   background-color: var(--color-primary);
   background-size: 50%;
+  transition: filter var(--trans-base);
+}
+/* Darker background color when hovered */
+.list__favorite:hover {
+  filter: brightness(0.9);
 }
