@@ -176,3 +176,34 @@
 .list__favorite:hover {
   filter: brightness(0.9);
 }
+
+/* ---==== PAGE FAVORITES ====--- */
+/* List */
+.page--favorites .list__favorite-text {
+  display: none;
+}
+
+.page--favorites .list__favorite.icon-2 {
+  background-image: url("../../images/delete-icon.svg");
+}
+
+.page--favorites .list__favorite {
+  background-color: var(--color-primary-soft);
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* Favorite button */
+  .page--favorites .list__favorite {
+    width: auto; /* Takes up its space and grows */
+    padding: 0 var(--s-md) 0 var(--s-2xl);
+    background-position: var(--s-md); /* Icon comes in correct position */
+    background-size: 1.1rem;
+  }
+  .page--favorites .list__favorite-text {
+    display: block;
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+    letter-spacing: var(--ls-sm);
+  }
+}

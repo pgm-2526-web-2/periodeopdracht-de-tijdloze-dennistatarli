@@ -15,6 +15,6 @@
 [X] Add animations for buttons and links
 [X] Tab text is accent color -> change to black when active
 [X] Logo mobile is clickable full width -> fix
-[] Fix font-weights for different text (LATO DOES NOT HAVE OTHER FW THAN NORMAL AND BOLD?)
+[X] Change things from HTML utilities to CSS
 [] Border-bottom of list-tabs stretches from screen border to screen border
-[] Change things from HTML utilities to CSS
+[] Fix font-weights for different text (LATO DOES NOT HAVE OTHER FW THAN NORMAL AND BOLD?)

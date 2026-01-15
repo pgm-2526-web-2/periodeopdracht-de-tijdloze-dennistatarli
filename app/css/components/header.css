@@ -6,23 +6,26 @@
   display: flex;
   align-items: center;
 }
-
 /* Show mobile logo and navigation icons */
 .logo-mobile,
 .navigation__icon {
   display: inline-flex; /* Block doesn't work? */
 }
-
 /* Hide logo desktop & dark mode button */
 .logo-desktop,
 .navigation__dark {
   display: none; /* No display: block for this so this line is not needed, but added to be sure */
 }
+.page--favorites .logo-mobile,
+.navigation__links {
+  width: 100%;
+  justify-content: space-between;
+}
 
 /* Header */
 .header {
   background-color: var(--color-primary);
-  padding-top: var(--s-md);
+  padding: var(--s-md) 0;
 }
 
 .logo-mobile,
@@ -49,8 +52,6 @@
 
 /* Links */
 .navigation__links {
-  justify-content: space-between;
-  width: 100%;
   padding: var(--s-xs) var(--s-3xl) var(--s-lg);
 }
 
@@ -82,7 +83,7 @@
   height: 1.5rem;
 }
 .icon-1 {
-  background-image: url("../../images/list-icon.svg");
+  background-image: url("../../images/list-active-icon.svg");
 }
 .icon-2 {
   background-image: url("../../images/favorites-icon.svg");
@@ -96,12 +97,13 @@
   font-size: var(--fs-sm);
 }
 
-/* Tablet */
-@media (min-width: 600px) {
-  /* TEST */
-  /* .navigation {
-    background: red;
-  } */
+/* ---==== PAGE FAVORITES ====--- */
+/* Icons */
+.page--favorites .icon-1 {
+  background-image: url("../../images/list-icon.svg");
+}
+.page--favorites .navigation__item .icon-2 {
+  background-image: url("../../images/favorites-active-icon.svg");
 }
 
 /* Desktop */
@@ -114,7 +116,7 @@
 
   /* Header */
   .header {
-    padding-top: 0; /* Reset the spacing meant for logo-mobile and title */
+    padding: 0; /* Reset the spacing meant for logo-mobile and title */
   }
 
   /* Hide mobile logo */

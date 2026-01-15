@@ -48,9 +48,25 @@
   height: 1rem;
 }
 
-/* Desktop */
-
+/* ---==== PAGE FAVORITES ====--- */
 /* Hero */
-.hero__content {
-  padding: var(--s-3xl) 0;
+.page--favorites .hero {
+  display: none;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* Hero */
+  .page--favorites .hero {
+    display: block;
+  }
+
+  .page--favorites .hero__content {
+    padding: var(--s-md) 0;
+  }
+
+  .page--favorites .hero__title {
+    line-height: var(--lh-2xl);
+    display: block;
+  }
 }

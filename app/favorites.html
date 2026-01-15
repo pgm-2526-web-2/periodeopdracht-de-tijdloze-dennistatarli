@@ -6,10 +6,10 @@
     <meta name="robots" content="noindex,nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <title>De Tijdloze - Studio Brussel</title>
+    <title>Favorieten - De Tijdloze</title>
 </head>
 
-<body>
+<body class="page--favorites">
     <!-- LOADING STATE
     <div id="splash" class="splash u-flex u-items-center u-justify-center u-flex-col u-gap-md">
         <span class="splash__logo u-block"></span>
@@ -21,8 +21,8 @@
         <div class="wrapper">
             <!-- Mobile logo -->
             <a href="#" class="logo logo-mobile u-gap-sm">
+                <p class="logo__title u-fw-bold u-text-2xl">Favorieten</p>
                 <span class="logo__icon"></span>
-                <p class="logo__title u-fw-bold u-text-lg">De Tijdloze</p>
             </a>
         </div>
 
@@ -37,15 +37,15 @@
                 <!-- Links -->
                 <div class="navigation__links">
 
-                    <a href="#" class="navigation__item">
-                        <span class="navigation__slot navigation__icon--active">
+                    <a href="index.html" class="navigation__item">
+                        <span class="navigation__slot">
                             <span class="navigation__icon icon-1"></span>
                         </span>
                         <span class="navigation__label">De lijst</span>
                     </a>
 
-                    <a href="favorites.html" class="navigation__item">
-                        <span class="navigation__slot">
+                    <a href="#" class="navigation__item">
+                        <span class="navigation__slot navigation__icon--active">
                             <span class="navigation__icon icon-2"></span>
                         </span>
                         <span class="navigation__label">Favorieten</span>
@@ -73,15 +73,7 @@
         <section class="hero">
             <div class="wrapper">
                 <div class="hero__content u-flex-col u-gap-md">
-                    <h1 class="hero__title u-text-3xl">Jouw soundtrack van het jaar</h1>
-                    <p class="hero__description">Stem op je favoriete nummers en maak mee wie de lijst aanvoert. Van 27
-                        december tot 31
-                        december - elke
-                        stem telt mee.</p>
-                    <button class="hero__button u-items-center u-justify-center u-py-xs u-px-md u-gap-xs">
-                        <span class="hero__button-icon u-block"></span>
-                        <p class="hero__button-text u-text-sm">Voeg een nummer toe</p>
-                    </button>
+                    <h1 class="hero__title u-text-2xl">Favorieten</h1>
                 </div>
             </div>
         </section>
@@ -90,12 +82,6 @@
         <section class="list">
             <div class="wrapper">
                 <div class="list__content">
-                    <!-- Tabs -->
-                    <div class="list__tabs u-items-center u-justify-between u-px-3xl">
-                        <button class="list__tab list__tab--active">Top 100</button>
-                        <button class="list__tab">Exits</button>
-                        <button class="list__tab">New in</button>
-                    </div>
 
                     <!-- List of songs -->
                     <div class="list__items">
@@ -114,7 +100,9 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <button class="list__favorite icon-2"></button>
+                            <button class="list__favorite icon-2">
+                                <span class="list__favorite-text">Verwijder</span>
+                            </button>
                         </article>
 
                         <!-- Song -->
@@ -131,7 +119,9 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <button class="list__favorite icon-2"></button>
+                            <button class="list__favorite icon-2">
+                                <span class="list__favorite-text">Verwijder</span>
+                            </button>
                         </article>
 
                         <!-- Song -->
@@ -148,7 +138,9 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <button class="list__favorite icon-2"></button>
+                            <button class="list__favorite icon-2">
+                                <span class="list__favorite-text">Verwijder</span>
+                            </button>
                         </article>
 
                         <!-- Song -->
@@ -165,7 +157,9 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <button class="list__favorite icon-2"></button>
+                            <button class="list__favorite icon-2">
+                                <span class="list__favorite-text">Verwijder</span>
+                            </button>
                         </article>
 
                         <!-- Song -->
@@ -182,7 +176,9 @@
                                     Ten - 1991
                                 </p>
                             </div>
-                            <button class="list__favorite icon-2"></button>
+                            <button class="list__favorite icon-2">
+                                <span class="list__favorite-text">Verwijder</span>
+                            </button>
                         </article>
 
                     </div>
@@ -191,11 +187,6 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer></footer>
-
-    <!-- JS -->
-    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
