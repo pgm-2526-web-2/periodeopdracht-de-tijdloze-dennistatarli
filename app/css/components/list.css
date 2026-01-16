@@ -140,9 +140,13 @@
 
 /* Artist */
 .list__artist {
+  width: fit-content; /* Only takes up space that is needed */
   font-size: var(--fs-sm);
   line-height: var(--lh-sm);
   letter-spacing: var(--ls-md);
+}
+.list__artist:hover {
+  text-decoration: underline;
 }
 
 /* Album */
