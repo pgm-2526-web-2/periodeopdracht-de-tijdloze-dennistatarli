@@ -1,2 +1,4 @@
 WRAPPER FIX !!!!!!!
 hoofdpijn alles
+
+?? JS code too much (innerHTML multiple times) -> shorter way?
