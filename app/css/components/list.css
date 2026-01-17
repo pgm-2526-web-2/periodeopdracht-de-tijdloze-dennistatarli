@@ -171,17 +171,17 @@
   height: 1rem;
 }
 .list__favorite {
-  background-color: var(--color-primary);
-  background-size: 50%;
-  transition: filter var(--trans-base);
-}
-.list__favorite {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-soft);
   transition: filter var(--trans-base);
+  background-size: 0%;
+}
+/* "Favorite" icon is yellow when it's "favorited" by user */
+.list__favorite.is-favorite {
+  background-color: var(--color-primary);
 }
 /* Darker background color when hovered */
 .list__favorite:hover {
