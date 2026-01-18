@@ -32,7 +32,9 @@
   background-color: var(--color-primary-soft);
   border-radius: var(--rad-base);
   width: fit-content; /* Reset to default size */
-  transition: transform var(--trans-base), box-shadow var(--trans-base);
+  transition:
+    transform var(--trans-base),
+    box-shadow var(--trans-base);
 }
 .hero__button:hover {
   transform: translateY(-2px);
@@ -67,5 +69,38 @@
   .page--favorites .hero__title {
     line-height: var(--lh-2xl);
     display: block;
+  }
+}
+
+/* ---==== PAGE ARTIST ====--- */
+@media (min-width: 1024px) {
+  /* Hero */
+  .page--artist .hero__title--artist {
+    display: block;
+    margin-top: var(--s-xl);
+  }
+
+  .page--artist .hero--artist .hero__media {
+    aspect-ratio: auto;
+    height: clamp(18rem, 25vw, 28rem);
+  }
+
+  .page--artist .hero--artist {
+    position: relative;
+  }
+
+  .page--artist .hero--artist .wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+    margin: 0;
+    padding: var(--s-xl) var(--s-3xl);
+    background-image: linear-gradient(
+      to top,
+      var(--color-primary) 0%,
+      transparent 100%
+    );
   }
 }

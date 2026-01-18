@@ -190,7 +190,8 @@
 
 /* ---==== PAGE FAVORITES ====--- */
 /* List */
-.page--favorites .list__favorite-text {
+.page--favorites .list__favorite-text,
+.page--artist .list__favorite-text {
   display: none;
 }
 
@@ -200,17 +201,96 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .page--favorites .list__favorite {
+  .page--favorites .list__favorite,
+  .page--artist .list__favorite {
     width: auto; /* Takes up needed space */
     display: flex;
     align-items: center;
     gap: var(--s-xs);
     padding: 0 var(--s-md);
   }
-  .page--favorites .list__favorite-text {
+  .page--favorites .list__favorite-text,
+  .page--artist .list__favorite-text {
     display: block;
     font-size: var(--fs-sm);
     line-height: var(--lh-sm);
     letter-spacing: var(--ls-sm);
+  }
+}
+
+/* ---==== PAGE ARTIST ====--- */
+/* Hero */
+.page--artist .hero__title--artist {
+  display: none;
+}
+
+.page--artist .hero--artist .hero__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.page--artist .hero--artist .hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* List */
+.page--artist .list__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-sm);
+  margin-top: var(--s-lg);
+}
+
+/* Item */
+.page--artist .list__item {
+  background-color: var(--color-secondary);
+  border-radius: var(--rad-sm);
+  padding: var(--s-sm);
+}
+
+/* Song */
+.page--artist .list__song {
+  border-bottom: none; /* Border is not visible because bg-color is the same color, but remove just in case */
+}
+
+/* Rank number */
+.page--artist .list__rank-number {
+  background-color: var(--color-text-light);
+  padding: var(--s-badge);
+  border-radius: var(--rad-sm);
+}
+
+/* Floating badge */
+.page--artist .list__rank-badge {
+  display: none;
+}
+
+/* Artist */
+.page--artist .list__artist {
+  display: none;
+}
+
+/* Icon */
+.page--artist .list__favorite {
+  border-radius: var(--rad-base);
+}
+
+@media (min-width: 1024px) {
+  /* Hero */
+  .page--artist .hero__title--artist {
+    display: block;
+  }
+
+  /* List */
+  .page--artist .list__items {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Song */
+  .page--artist .list__item:nth-child(3n + 1) {
+    /* Select every third song starting from the first -> I think this is the layout according to Figma */
+    grid-row: span 2;
   }
 }

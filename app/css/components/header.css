@@ -20,7 +20,8 @@
   display: none; /* No display: block for this so this line is not needed, but added to be sure */
 }
 .page--favorites .logo-mobile,
-.navigation__links {
+.navigation__links,
+.page--artist .logo-mobile {
   width: 100%;
   justify-content: space-between;
 }
@@ -141,5 +142,36 @@
   /* Dark mode */
   .navigation__dark {
     margin-top: auto; /* At bottom of screen */
+  }
+}
+
+/* ---==== PAGE ARTIST ====--- */
+/* Header */
+.page--artist .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-primary) 0%,
+    transparent 100%
+  );
+}
+
+@media (min-width: 1024px) {
+  /* Header */
+  .page--artist .header {
+    background-image: linear-gradient(
+      to top,
+      var(--color-primary) 0%,
+      transparent 100%
+    );
+  }
+
+  /* Title */
+  .page--artist .logo__title {
+    display: none;
   }
 }
