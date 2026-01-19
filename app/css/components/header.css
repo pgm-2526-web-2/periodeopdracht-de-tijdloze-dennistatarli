@@ -21,7 +21,8 @@
 }
 .page--favorites .logo-mobile,
 .navigation__links,
-.page--artist .logo-mobile {
+.page--artist .logo-mobile,
+.page--add-artist .logo-mobile {
   width: 100%;
   justify-content: space-between;
 }

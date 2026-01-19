@@ -1,4 +1,7 @@
 (() => {
+  // Run only on page--tabs
+  if (!document.body.classList.contains("page--tabs")) return;
+
   const API = "https://www.pgm.gent/data/tijdloze/tijdloze.json";
   const tabs = document.querySelectorAll(".list__tab"); // Underlining
   const list = document.querySelector(".list__items"); // "Top 100" (default) tab

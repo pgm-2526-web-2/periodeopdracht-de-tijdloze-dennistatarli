@@ -1,5 +1,5 @@
 (() => {
-  // Run only on artist page
+  // Run only on page--artist
   if (!document.body.classList.contains("page--artist")) return;
 
   const titleHeader = document.querySelector("[data-artist-title]");

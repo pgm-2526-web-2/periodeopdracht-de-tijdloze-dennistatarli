@@ -24,6 +24,9 @@
 
   --color-btn-active: #000;
 
+  --color-form-field: #f2f2f2;
+  --color-form-input: #8791ab;
+
   /* Font sizes */
   --fs-2xs: 0.68rem;
   --fs-xs: 0.75rem;

@@ -1,0 +1,48 @@
+/* Section */
+.page--add-artist .add {
+  padding: var(--s-md) 0;
+  border-bottom: var(--b-base);
+}
+
+/* Form */
+.page--add-artist .add__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-sm);
+}
+
+/* Field */
+.page--add-artist .add__field {
+  background-color: var(--color-form-field);
+  padding: var(--s-xs) var(--s-md);
+  border-bottom: var(--b-base);
+}
+
+/* Label */
+.page--add-artist .add__label {
+  display: block; /* Above input */
+  margin-bottom: var(--s-2xs);
+  color: var(--color-text-accent);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-xs);
+  letter-spacing: var(--ls-xl);
+}
+
+/* Input */
+.page--add-artist .add__input {
+  width: 100%;
+  border: 0;
+  color: var(--color-form-input);
+  background-color: transparent;
+  line-height: var(--lh-md);
+  letter-spacing: var(--ls-2xl);
+}
+.page--add-artist .add__input::placeholder {
+  color: var(--color-form-input);
+}
+
+/* Submit button (-> Why not a normal decent "Submit" button instead of the same "Voeg een nummer toe"?)*/
+.page--add-artist .add button {
+  background-color: black;
+  color: var(--color-primary);
+}

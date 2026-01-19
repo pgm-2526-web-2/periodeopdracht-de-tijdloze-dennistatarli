@@ -51,7 +51,8 @@
 
 /* ---==== PAGE FAVORITES ====--- */
 /* Hero */
-.page--favorites .hero {
+.page--favorites .hero,
+.page--add-artist .hero {
   display: none;
 }
 
