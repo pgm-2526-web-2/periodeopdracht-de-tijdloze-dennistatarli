@@ -13,12 +13,11 @@
     splash.remove();
   };
 
-  // TEST (SPLASH SCREEN VISIBLE ON EVERY VISIT)
   // Hide splash if the user already has visited the page
-  // if (hasVisited) {
-  //   hideSplash();
-  //   return;
-  // }
+  if (hasVisited) {
+    hideSplash();
+    return;
+  }
 
   // Store user's first visit
   localStorage.setItem(KEY, "true");
