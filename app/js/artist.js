@@ -100,7 +100,7 @@
               </p>
             </div>
 
-            <button class="list__favorite" data-id="${song.id}">
+            <button class="list__favorite" >
               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
                 <path d="M0 11.6667V0L9.16667 5.83333L0 11.6667Z" fill="black" />
               </svg>

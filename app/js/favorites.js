@@ -57,7 +57,7 @@
 
       <div class="list__song">
         <h2 class="list__title">${song.song_title}</h2>
-        <a href="#" class="list__artist">${song.name}</a>
+        <a href="./artist.html?id=${song.artist_id}" class="list__artist">${song.name}</a>
 
         <p class="list__album">
           <span class="list__album-icon">

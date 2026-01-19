@@ -20,10 +20,10 @@
   //   return;
   // }
 
-  // // Store user's first visit
-  // localStorage.setItem(KEY, "true");
+  // Store user's first visit
+  localStorage.setItem(KEY, "true");
 
   window.addEventListener("load", () => {
-    setTimeout(hideSplash, 0); // Test timer on first visit
+    setTimeout(hideSplash, 1000); // Test timer on first visit
   });
 })();

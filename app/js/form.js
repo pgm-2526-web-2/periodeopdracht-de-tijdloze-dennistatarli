@@ -16,7 +16,7 @@
     localStorage.setItem(KEY, JSON.stringify(songs));
   };
 
-  let editingId = null;
+  let editingId = null; // null = possible to edit
 
   // Render list songs
   const renderSongs = () => {
@@ -34,7 +34,7 @@
       <article class="list__item">
           <div class="list__song">
             <h2 class="list__title">${song.title}</h2>
-            <a href="#" class="list__artist">${song.artist}</a>
+            <a href="./artist.html?id=${song.artist_id}" class="list__artist">${song.artist}</a>
             <p class="list__album">
             <span class="list__album-icon">
                                                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
@@ -48,7 +48,7 @@
             </p>
           </div>
 
-          <button class="list__favorite icon-2" data-id="${song.id}>
+          <button class="list__favorite icon-2" data-id="${song.id}">
 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
   <path d="M1.66667 13.3333H2.85417L11 5.1875L9.8125 4L1.66667 12.1458V13.3333ZM0 15V11.4583L11 0.479167C11.1667 0.326389 11.3507 0.208333 11.5521 0.125C11.7535 0.0416667 11.9653 0 12.1875 0C12.4097 0 12.625 0.0416667 12.8333 0.125C13.0417 0.208333 13.2222 0.333333 13.375 0.5L14.5208 1.66667C14.6875 1.81944 14.809 2 14.8854 2.20833C14.9618 2.41667 15 2.625 15 2.83333C15 3.05556 14.9618 3.26736 14.8854 3.46875C14.809 3.67014 14.6875 3.85417 14.5208 4.02083L3.54167 15H0ZM10.3958 4.60417L9.8125 4L11 5.1875L10.3958 4.60417Z" fill="black"/>
 </svg>
