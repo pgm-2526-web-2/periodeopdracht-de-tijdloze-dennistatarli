@@ -59,7 +59,8 @@
 /* Desktop */
 @media (min-width: 1024px) {
   /* Hero */
-  .page--favorites .hero {
+  .page--favorites .hero,
+  .page--add-artist .hero {
     display: block;
   }
 
@@ -103,5 +104,14 @@
       var(--color-primary) 0%,
       transparent 100%
     );
+  }
+}
+
+/* ---==== PAGE ADD SONG ====--- */
+@media (min-width: 1024px) {
+  /* Hero */
+  .page--artist .hero__title--artist {
+    display: block;
+    margin-top: var(--s-xl);
   }
 }

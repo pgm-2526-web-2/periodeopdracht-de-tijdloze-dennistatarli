@@ -191,7 +191,8 @@
 /* ---==== PAGE FAVORITES ====--- */
 /* List */
 .page--favorites .list__favorite-text,
-.page--artist .list__favorite-text {
+.page--artist .list__favorite-text,
+.page--add-artist .list__favorite-text {
   display: none;
 }
 
@@ -202,7 +203,8 @@
 /* Desktop */
 @media (min-width: 1024px) {
   .page--favorites .list__favorite,
-  .page--artist .list__favorite {
+  .page--artist .list__favorite,
+  .page--add-artist .list__favorite {
     width: auto; /* Takes up needed space */
     display: flex;
     align-items: center;
@@ -210,7 +212,8 @@
     padding: 0 var(--s-md);
   }
   .page--favorites .list__favorite-text,
-  .page--artist .list__favorite-text {
+  .page--artist .list__favorite-text,
+  .page--add-artist .list__favorite-text {
     display: block;
     font-size: var(--fs-sm);
     line-height: var(--lh-sm);
@@ -275,6 +278,116 @@
 /* Icon */
 .page--artist .list__favorite {
   border-radius: var(--rad-base);
+}
+
+/* Playing animation */
+.list__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list__equalizer {
+  display: inline-flex;
+  align-items: flex-end; /* Correct position (bottom) */
+  gap: var(--s-2xs);
+  height: var(--s-md);
+}
+.list__bar {
+  width: var(--s-2xs);
+  border-radius: var(--rad-base);
+  background: var(--color-btn-active);
+}
+/* Bars */
+.list__bar:nth-child(1) {
+  height: 0.45rem; /* Minimum, values need to be too specific -> no variables needed (I think) */
+  animation: bar1 700ms infinite linear;
+}
+.list__bar:nth-child(2) {
+  height: 0.25rem;
+  animation: bar2 900ms infinite linear;
+}
+.list__bar:nth-child(3) {
+  height: 0.35rem;
+  animation: bar3 600ms infinite linear;
+}
+.list__bar:nth-child(4) {
+  height: 0.3rem;
+  animation: bar4 850ms infinite linear;
+}
+/* Animations */
+@keyframes bar1 {
+  0% {
+    height: 0.45rem;
+  }
+  20% {
+    height: 1.1rem;
+  }
+  45% {
+    height: 0.55rem;
+  }
+  70% {
+    height: 0.95rem;
+  }
+  100% {
+    height: 0.45rem;
+  }
+}
+@keyframes bar2 {
+  0% {
+    height: 0.25rem;
+  }
+  15% {
+    height: 0.8rem;
+  }
+  35% {
+    height: 0.35rem;
+  }
+  60% {
+    height: 1.05rem;
+  }
+  100% {
+    height: 0.25rem;
+  }
+}
+@keyframes bar3 {
+  0% {
+    height: 0.35rem;
+  }
+  10% {
+    height: 1rem;
+  }
+  30% {
+    height: 0.4rem;
+  }
+  55% {
+    height: 0.9rem;
+  }
+  100% {
+    height: 0.35rem;
+  }
+}
+@keyframes bar4 {
+  0% {
+    height: 0.3rem;
+  }
+  25% {
+    height: 0.95rem;
+  }
+  40% {
+    height: 0.35rem;
+  }
+  75% {
+    height: 0.8rem;
+  }
+  100% {
+    height: 0.3rem;
+  }
+}
+.page--artist .list__equalizer {
+  display: none;
+}
+.page--artist .list__item.is-playing .list__equalizer {
+  display: inline-flex;
 }
 
 @media (min-width: 1024px) {

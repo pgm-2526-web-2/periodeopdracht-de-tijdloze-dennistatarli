@@ -5,10 +5,22 @@
   const titleHeader = document.querySelector("[data-artist-title]");
   const titleHero = document.querySelector("[data-artist-hero-title]");
   const list = document.querySelector(".list__items");
+  const heroImage = document.querySelector("[data-artist-image]");
 
   const API = "https://www.pgm.gent/data/tijdloze/tijdloze.json";
 
   if (!titleHeader || !titleHero || !list) return;
+
+  // Song playing animation
+  list.addEventListener("click", (element) => {
+    if (!element.target.classList.contains("list__favorite")) return;
+
+    const item = element.target.parentElement; // .list__item
+    list
+      .querySelectorAll(".list__item.is-playing")
+      .forEach((element) => element.classList.remove("is-playing")); // Remove animation other songs
+    item.classList.add("is-playing"); // Add animation clicked button
+  });
 
   const artistPage = async () => {
     try {
@@ -25,6 +37,9 @@
       // Render artist name in header (mobile) & hero (desktop)
       titleHeader.textContent = artist.name;
       titleHero.textContent = artist.name;
+      // Render artist image from artist JSON
+      heroImage.src = artist.image;
+      heroImage.alt = artist.name;
 
       // Fetch data (same as tabs.js)
       const res = await fetch(API);
@@ -61,7 +76,16 @@
             </span>
 
             <div class="list__song">
-              <h2 class="list__title">${song.song_title}</h2>
+              <div class="list__title-row">
+  <h2 class="list__title">${song.song_title}</h2>
+
+  <span class="list__equalizer">
+    <span class="list__bar"></span>
+    <span class="list__bar"></span>
+    <span class="list__bar"></span>
+    <span class="list__bar"></span>
+  </span>
+</div>
 
               <p class="list__album">
                                     <span class="list__album-icon">
@@ -76,7 +100,7 @@
               </p>
             </div>
 
-            <button class="list__favorite">
+            <button class="list__favorite" data-id="${song.id}">
               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
                 <path d="M0 11.6667V0L9.16667 5.83333L0 11.6667Z" fill="black" />
               </svg>
